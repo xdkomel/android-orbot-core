@@ -1,18 +1,2 @@
-apply plugin: "maven-publish"
-
-group = 'com.github.GGitton'
-
 configurations.maybeCreate("default")
-def publishArtifact = artifacts.add("default", file('OrbotLib.aar'))
-
-publishing {
-    publications {
-        aar(MavenPublication) {
-            groupId = 'com.github.GGitton'
-            artifactId = 'NULL-END-Orbot-core'
-            version = '1.0.0'
-            artifact publishArtifact
-        }
-    }
-}
-
+artifacts.add("default",file('OrbotLib.aar'))
